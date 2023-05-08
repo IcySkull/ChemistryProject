@@ -2,12 +2,9 @@ public class Element implements Comparable<Element>{
   int electrons;
   int protons;
   int atomicMass;
-  int charge
-  public Element(int electrons, int protons, int mass){
-    this.electrons = electrons;
-    this.protons = protons;
-    this.atomicMass = mass;
-    this.charge = protons-electrons;
+  int charge;
+  public Element(){
+
   }
   public Element(int charge, int protons, int mass){
     this.electrons = protons-charge;
@@ -30,13 +27,12 @@ public class Element implements Comparable<Element>{
   public int getChargeType(){
     if(this.charge == 0)return 0;
     if(this.charge >= 1)return 1;
-    if(this.charge <= -1)return -1;
-    return null;
+    return -1;
   }
+
 
   @Override
-  public int compareTo(Element o){
-    return getCharge().compareTo(o)
+  public int compareTo(Element o) {
+    return 0;
   }
-
 }
